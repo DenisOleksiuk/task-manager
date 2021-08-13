@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index",
-    "dev": "env-cmd ./config/dev.env nodemon src/index.js"
+    "dev": "env-cmd ./config/dev.env nodemon src/index.js",
+    "test": "env-cmd ./config/test.env jest --watch"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "repository": {
     "type": "git",
@@ -31,6 +35,8 @@
   },
   "devDependencies": {
     "env-cmd": "^8.0.2",
-    "nodemon": "^2.0.9"
+    "jest": "^27.0.6",
+    "nodemon": "^2.0.9",
+    "supertest": "^3.4.2"
   }
 }
